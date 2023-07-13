@@ -1,0 +1,25 @@
+{
+    "name": "cambit/sorted-link-list",
+    "description": "Sorted link list library",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Cambit\\SortedLinkedList\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "cambi"
+        }
+    ],
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^10.2"
+    },
+    "scripts": {
+        "phpstan": "./vendor/bin/phpstan analyse -l max src tests",
+        "phpunit": "./vendor/bin/phpunit tests",
+        "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-text"
+    }
+}
